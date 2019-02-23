@@ -30,7 +30,7 @@
 				</li>
 			</ul>
 			
-			<a class="btn btn-outline-primary mr-1 text-light" href="#">SignUp</a>
+			<a class="btn btn-outline-primary mr-1 text-light" href="SignUp">SignUp</a>
 			<a class="btn btn-outline-primary text-light" href="Login">Login</a>
 		
 		</div>
