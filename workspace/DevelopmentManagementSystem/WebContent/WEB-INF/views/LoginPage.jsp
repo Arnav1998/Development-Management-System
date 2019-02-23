@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -7,10 +7,10 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Home</title>
+	<title>Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	
+
 </head>
 
 <body>
@@ -36,8 +36,26 @@
 		</div>
 		
 	</nav>
+	
+	<div class="mt-5 mx-auto" style="width: 600px;">
 
-
+		<form action="#">
+		
+			<div class="form-group">		
+				<label>Email address</label> 
+				<input type="email" class="form-control" placeholder="Enter email"> 
+				<small class="form-text text-muted">We'll never share your email with anyone else.</small>
+			</div>
+			
+			<div class="form-group">
+				<label>Password</label> 
+				<input type="password" class="form-control" placeholder="Password">
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+			
+		</form>
+		
+	</div>
 
 </body>
 
