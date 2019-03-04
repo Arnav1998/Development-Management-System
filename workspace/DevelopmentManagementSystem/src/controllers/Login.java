@@ -58,9 +58,9 @@ public class Login extends HttpServlet {
 		          ResultSet rs = stmt.executeQuery( query );
 		
 		          if (rs.next()) {
-		        	  System.out.println("Logged In.");
+		        	  response.sendRedirect("Dashboard?email="+email);
 		          } else {
-		        	  System.out.println("Incorrect Username/Password");
+		        	  response.sendRedirect("Login?access=0");
 		          }
 		       
 		      }

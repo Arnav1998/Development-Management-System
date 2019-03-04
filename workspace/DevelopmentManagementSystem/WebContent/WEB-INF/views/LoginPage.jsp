@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -38,6 +40,17 @@
 	</nav>
 	
 	<h1 class="text-center mt-5">Sign In</h1>
+	
+	<c:if test="${param.access==0}">
+		
+		<div class="card mt-5 mx-auto" style="width: 600px;">
+			<div class="card-header text-white bg-danger">An Error has occured.</div>
+			<div class="card-body alert alert-danger">
+	  				Incorrect username or password.
+			</div>
+		</div>
+	
+	</c:if>
 	
 	<div class="mt-5 mx-auto border p-5 bg-light" style="width: 600px;">
 

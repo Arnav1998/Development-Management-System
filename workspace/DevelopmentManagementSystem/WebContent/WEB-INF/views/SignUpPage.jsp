@@ -10,7 +10,7 @@
 	<title>Sign Up!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+	
 </head>
 
 <body>
@@ -93,7 +93,7 @@
 			
 				<div class="form-group col-md-6">
 					<label class="font-weight-bold">City</label> 
-					<input type="text" class="form-control" name="city">
+					<input type="text" class="form-control" name="city" placeholder="Los Angeles">
 				</div>
 				
 				<div class="form-group col-md-4">
@@ -101,7 +101,56 @@
 					<label class="font-weight-bold">State</label> 
 					<select id="inputState" class="form-control" name="state">
 						<option selected>Choose...</option>
+						<option>Alabama</option>
+						<option>Alaska</option>
+						<option>Arizona</option>
+						<option>Arkansas</option>
 						<option>California</option>
+						<option>Colorado</option>
+						<option>Connecticut</option>
+						<option>Delaware</option>
+						<option>Florida</option>
+						<option>Georgia</option>
+						<option>Hawaii</option>
+						<option>Idaho</option>
+						<option>Illinois</option>
+						<option>Indiana</option>
+						<option>Iowa</option>
+						<option>Kansas</option>
+						<option>Kentucky</option>
+						<option>Louisiana</option>
+						<option>Maine</option>
+						<option>Maryland</option>
+						<option>Massachusetts</option>
+						<option>Michigan</option>
+						<option>Minnesota</option>
+						<option>Mississippi</option>
+						<option>Missouri</option>
+						<option>Montana</option>
+						<option>Nebraska</option>
+						<option>Nevada</option>
+						<option>New Hampshire</option>
+						<option>New Jersey</option>
+						<option>New Mexico</option>
+						<option>New York</option>
+						<option>North Carolina</option>
+						<option>North Dakota</option>
+						<option>Ohio</option>
+						<option>Oklahoma</option>
+						<option>Oregon</option>
+						<option>Pennsylvania</option>
+						<option>Rhode Island</option>
+						<option>South Carolina</option>
+						<option>South Dakota</option>
+						<option>Tennessee</option>
+						<option>Texas</option>
+						<option>Utah</option>
+						<option>Vermont</option>
+						<option>Virginia</option>
+						<option>Washington</option>
+						<option>West Virginia</option>
+						<option>Wisconsin</option>
+						<option>Wyonming</option>
 					</select>
 				
 				</div>
@@ -109,7 +158,7 @@
 				<div class="form-group col-md-2">
 					
 					<label class="font-weight-bold">Zip</label> 
-					<input type="text" class="form-control" name="zip">
+					<input type="text" class="form-control" name="zip" placeholder="90032">
 				
 				</div>
 			
