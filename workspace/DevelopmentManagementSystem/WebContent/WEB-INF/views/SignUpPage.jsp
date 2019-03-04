@@ -39,26 +39,49 @@
 	
 	<div class="mt-5 mx-auto" style="width: 600px;">
 
-		<form>
+		<form action="SignUp" method="POST">
+			
+			
+			<div class="form-group">
+			
+				<label>First Name</label> 
+				<input type="text" class="form-control" placeholder="Tom" name="firstName">
+				
+			</div>
+			
+			
+			<div class="form-group">
+			
+				<label>Last Name</label> 
+				<input type="text" class="form-control" placeholder="Bradley" name="lastName">
+				
+			</div>
 		
 			<div class="form-row">
 			
 				<div class="form-group col-md-6">
 					<label>Email</label> 
-					<input type="email" class="form-control" placeholder="Email">
+					<input type="email" class="form-control" placeholder="Email" name="email">
 				</div>
 				
 				<div class="form-group col-md-6">
 					<label>Password</label> 
-					<input type="password" class="form-control" placeholder="Password">
+					<input type="password" class="form-control" placeholder="Password" name="password">
 				</div>
 				
 			</div>
 			
 			<div class="form-group">
 			
+				<label>Phone</label> 
+				<input type="text" class="form-control" placeholder="8888888888" name="phone">
+				
+			</div>
+			
+			<div class="form-group">
+			
 				<label for="inputAddress">Address</label> 
-				<input type="text" class="form-control" placeholder="1234 Main St">
+				<input type="text" class="form-control" placeholder="1234 Main St" name="address">
 				
 			</div>
 			
@@ -66,15 +89,15 @@
 			
 				<div class="form-group col-md-6">
 					<label>City</label> 
-					<input type="text" class="form-control">
+					<input type="text" class="form-control" name="city">
 				</div>
 				
 				<div class="form-group col-md-4">
 				
 					<label>State</label> 
-					<select id="inputState" class="form-control">
+					<select id="inputState" class="form-control" name="state">
 						<option selected>Choose...</option>
-						<option>...</option>
+						<option>California</option>
 					</select>
 				
 				</div>
@@ -82,20 +105,20 @@
 				<div class="form-group col-md-2">
 					
 					<label>Zip</label> 
-					<input type="text" class="form-control">
+					<input type="text" class="form-control" name="zip">
 				
 				</div>
 			
 			</div>
 			
-			<div class="form-group">
+			<!-- <div class="form-group">
 			
 				<div class="form-check">
 					<input class="form-check-input" type="checkbox">
 					<label class="form-check-label"> I agree to the terms and conditions! </label>
 				</div>
 				
-			</div>
+			</div> -->
 			
 			<button type="submit" class="btn btn-primary">Sign Up</button>
 		
