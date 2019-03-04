@@ -37,24 +37,32 @@
 		
 	</nav>
 	
-	<div class="mt-5 mx-auto" style="width: 600px;">
+	<h1 class="text-center mt-5">Sign In</h1>
+	
+	<div class="mt-5 mx-auto border p-5 bg-light" style="width: 600px;">
 
 		<form action="Login" method="POST">
 		
 			<div class="form-group">		
-				<label>Email address</label> 
+				<label class="font-weight-bold">Email address</label> 
 				<input type="email" class="form-control" placeholder="Enter email" name="email"> 
 				<small class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 			
 			<div class="form-group">
-				<label>Password</label> 
+				<label class="font-weight-bold">Password</label> 
 				<input type="password" class="form-control" placeholder="Password" name="password">
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-primary form-control">Submit</button>
 			
 		</form>
 		
+	</div>
+	
+	<div class="mt-5 mx-auto border p-3 bg-light" style="width: 600px;">
+	
+		<label>Dont have an account? <a href="SignUp">Create an account.</a></label>
+	
 	</div>
 
 </body>
