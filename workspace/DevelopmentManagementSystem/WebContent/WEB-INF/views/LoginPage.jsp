@@ -23,14 +23,14 @@
 		
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
+					<a class="nav-link" href="Home">Home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">About Us</a>
 				</li>
 			</ul>
 			
-			<a class="btn btn-outline-primary mr-1 text-light" href="#">SignUp</a>
+			<a class="btn btn-outline-primary mr-1 text-light" href="SignUp">SignUp</a>
 			<a class="btn btn-outline-primary text-light" href="Login">Login</a>
 		
 		</div>

@@ -23,28 +23,32 @@
 		
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
+					<a class="nav-link" href="Home">Home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">About Us</a>
 				</li>
 			</ul>
 			
-			<a class="btn btn-outline-primary mr-1 text-light" href="#">SignUp</a>
+			<a class="btn btn-outline-primary mr-1 text-light" href="SignUp">SignUp</a>
 			<a class="btn btn-outline-primary text-light" href="Login">Login</a>
 		
 		</div>
 		
 	</nav>
 	
-	<div class="mt-5 mx-auto" style="width: 600px;">
+	<h1 class="text-center mt-5">Join Us</h1>
+	
+	<h2 class="text-center mt-2 text-secondary">The best way to manage and keep track of your project.</h2>
+	
+	<div class="mt-5 mx-auto border p-5 bg-light" style="width: 600px;">
 
 		<form action="SignUp" method="POST">
 			
 			
 			<div class="form-group">
 			
-				<label>First Name</label> 
+				<label class="font-weight-bold">First Name</label> 
 				<input type="text" class="form-control" placeholder="Tom" name="firstName">
 				
 			</div>
@@ -52,7 +56,7 @@
 			
 			<div class="form-group">
 			
-				<label>Last Name</label> 
+				<label class="font-weight-bold">Last Name</label> 
 				<input type="text" class="form-control" placeholder="Bradley" name="lastName">
 				
 			</div>
@@ -60,12 +64,12 @@
 			<div class="form-row">
 			
 				<div class="form-group col-md-6">
-					<label>Email</label> 
+					<label class="font-weight-bold">Email</label> 
 					<input type="email" class="form-control" placeholder="Email" name="email">
 				</div>
 				
 				<div class="form-group col-md-6">
-					<label>Password</label> 
+					<label class="font-weight-bold">Password</label> 
 					<input type="password" class="form-control" placeholder="Password" name="password">
 				</div>
 				
@@ -73,14 +77,14 @@
 			
 			<div class="form-group">
 			
-				<label>Phone</label> 
+				<label class="font-weight-bold">Phone</label> 
 				<input type="text" class="form-control" placeholder="8888888888" name="phone">
 				
 			</div>
 			
 			<div class="form-group">
 			
-				<label for="inputAddress">Address</label> 
+				<label for="inputAddress" class="font-weight-bold">Address</label> 
 				<input type="text" class="form-control" placeholder="1234 Main St" name="address">
 				
 			</div>
@@ -88,13 +92,13 @@
 			<div class="form-row">
 			
 				<div class="form-group col-md-6">
-					<label>City</label> 
+					<label class="font-weight-bold">City</label> 
 					<input type="text" class="form-control" name="city">
 				</div>
 				
 				<div class="form-group col-md-4">
 				
-					<label>State</label> 
+					<label class="font-weight-bold">State</label> 
 					<select id="inputState" class="form-control" name="state">
 						<option selected>Choose...</option>
 						<option>California</option>
@@ -104,7 +108,7 @@
 				
 				<div class="form-group col-md-2">
 					
-					<label>Zip</label> 
+					<label class="font-weight-bold">Zip</label> 
 					<input type="text" class="form-control" name="zip">
 				
 				</div>
@@ -120,7 +124,7 @@
 				
 			</div> -->
 			
-			<button type="submit" class="btn btn-primary">Sign Up</button>
+			<button type="submit" class="btn btn-primary form-control">Sign Up</button>
 		
 		</form>
 	
