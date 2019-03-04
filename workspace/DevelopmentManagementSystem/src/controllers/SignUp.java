@@ -47,36 +47,47 @@ public class SignUp extends HttpServlet {
 			String city = request.getParameter("city");
 			String state = request.getParameter("state");
 			String zip = request.getParameter("zip");
+			
+			if (!firstName.isEmpty() && !lastName.isEmpty() && !email.isEmpty() && !password.isEmpty() && !phone.isEmpty() && !address.isEmpty() && !city.isEmpty() && !state.isEmpty() && !zip.isEmpty()) {
 
-			Connection c = null;
-		      try
-		      {
-		        String url = "jdbc:mysql://148.66.138.112:3306/projectX3337";
-		      	String username="Arnav";
-		      	String dbPassword="projectX3337";
-		
-		          c = DriverManager.getConnection( url, username, dbPassword );
-		          Statement stmt = c.createStatement();;
-		          String query = "INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `phone`, `address`, `city`, `state`, `zip`, `projectId`) VALUES (NULL, '"+firstName+"', '"+lastName+"', '"+email+"', '"+password+"', '"+phone+"', '"+address+"', '"+city+"', '"+state+"', '"+zip+"', NULL);";
-		          int rs = stmt.executeUpdate(query);
-		       
-		      }
-		      
-		      catch( SQLException e )
-		      {
-		          throw new ServletException( e );
-		      }
-		      finally
-		      {
-		          try
-		          {
-		              if( c != null ) c.close();
-		          }
-		          catch( SQLException e )
-		          {
-		              throw new ServletException( e );
-		          }
-		      }
+				Connection c = null;
+			      try
+			      {
+			        String url = "jdbc:mysql://148.66.138.112:3306/projectX3337";
+			      	String username="Arnav";
+			      	String dbPassword="projectX3337";
+			
+			          c = DriverManager.getConnection( url, username, dbPassword );
+			          Statement stmt = c.createStatement();;
+			          String query = "INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `phone`, `address`, `city`, `state`, `zip`, `projectId`) VALUES (NULL, '"+firstName+"', '"+lastName+"', '"+email+"', '"+password+"', '"+phone+"', '"+address+"', '"+city+"', '"+state+"', '"+zip+"', NULL);";
+			          int rs = stmt.executeUpdate(query);
+			          
+			          response.sendRedirect("Login");
+			       
+			      }
+			      
+			      catch( SQLException e )
+			      {
+			          throw new ServletException( e );
+			      }
+			      finally
+			      {
+			          try
+			          {
+			              if( c != null ) c.close();
+			          }
+			          catch( SQLException e )
+			          {
+			              throw new ServletException( e );
+			          }
+			      }
+			 
+			      
+			} else {
+				
+				response.sendRedirect("SignUp");
+				
+			}
 			
 		
 		
