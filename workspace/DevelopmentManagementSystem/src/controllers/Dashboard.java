@@ -44,8 +44,8 @@ public class Dashboard extends HttpServlet {
 	        String url = "jdbc:mysql://148.66.138.112:3306/projectX3337";
 	      	String username="Arnav";
 	      	String dbPassword="projectX3337";
-			String securedPassword = Encrypter.encrypt(request.getParameter("password"));
-	
+			String securedPassword = request.getParameter("key");
+
 	          c = DriverManager.getConnection( url, username, dbPassword );
 	          Statement stmt = c.createStatement();
 		         

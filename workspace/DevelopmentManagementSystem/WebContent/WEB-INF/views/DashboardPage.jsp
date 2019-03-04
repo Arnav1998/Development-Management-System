@@ -81,7 +81,7 @@
 		
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="Dashboard?email=${param.email}">Dashboard</a>
+					<a class="nav-link" href="Dashboard?email=${param.email}&key=${param.key}">Dashboard</a>
 				</li>
 			</ul>
 			
