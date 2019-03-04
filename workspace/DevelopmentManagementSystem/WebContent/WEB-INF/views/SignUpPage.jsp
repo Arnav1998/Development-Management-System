@@ -49,7 +49,7 @@
 			<div class="form-group">
 			
 				<label class="font-weight-bold">First Name</label> 
-				<input type="text" class="form-control" placeholder="Tom" name="firstName">
+				<input type="text" class="form-control" placeholder="Tom" name="firstName" minlength="1">
 				
 			</div>
 			
@@ -57,7 +57,7 @@
 			<div class="form-group">
 			
 				<label class="font-weight-bold">Last Name</label> 
-				<input type="text" class="form-control" placeholder="Bradley" name="lastName">
+				<input type="text" class="form-control" placeholder="Bradley" name="lastName" minlength="1">
 				
 			</div>
 		
@@ -70,7 +70,7 @@
 				
 				<div class="form-group col-md-6">
 					<label class="font-weight-bold">Password</label> 
-					<input type="password" class="form-control" placeholder="Password" name="password">
+					<input type="password" class="form-control" placeholder="Password" name="password" minlength="5">
 				</div>
 				
 			</div>
@@ -78,14 +78,14 @@
 			<div class="form-group">
 			
 				<label class="font-weight-bold">Phone</label> 
-				<input type="text" class="form-control" placeholder="8888888888" name="phone">
+				<input type="text" class="form-control" placeholder="8888888888" name="phone" minlength="10">
 				
 			</div>
 			
 			<div class="form-group">
 			
 				<label for="inputAddress" class="font-weight-bold">Address</label> 
-				<input type="text" class="form-control" placeholder="1234 Main St" name="address">
+				<input type="text" class="form-control" placeholder="1234 Main St" name="address" minlength="5">
 				
 			</div>
 			
@@ -93,7 +93,7 @@
 			
 				<div class="form-group col-md-6">
 					<label class="font-weight-bold">City</label> 
-					<input type="text" class="form-control" name="city" placeholder="Los Angeles">
+					<input type="text" class="form-control" name="city" placeholder="Los Angeles" minlength="1">
 				</div>
 				
 				<div class="form-group col-md-4">
@@ -158,7 +158,7 @@
 				<div class="form-group col-md-2">
 					
 					<label class="font-weight-bold">Zip</label> 
-					<input type="text" class="form-control" name="zip" placeholder="90032">
+					<input type="text" class="form-control" name="zip" placeholder="90032" minlength="1">
 				
 				</div>
 			

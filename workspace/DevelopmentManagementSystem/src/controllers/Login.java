@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.Encrypter;
+
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -50,15 +52,16 @@ public class Login extends HttpServlet {
 		        String url = "jdbc:mysql://148.66.138.112:3306/projectX3337";
 		      	String username="Arnav";
 		      	String dbPassword="projectX3337";
+		      	String securedPassword = Encrypter.encrypt(password);
 		
 		          c = DriverManager.getConnection( url, username, dbPassword );
 		          Statement stmt = c.createStatement();;
 		         
-		          String query = "select * from `users` WHERE email='"+email+"' AND password='"+password+"'";
+		          String query = "select * from `users` WHERE email='"+email+"' AND password='"+securedPassword+"'";
 		          ResultSet rs = stmt.executeQuery( query );
 		
 		          if (rs.next()) {
-		        	  response.sendRedirect("Dashboard?email="+email);
+		        	  response.sendRedirect("Dashboard?email="+email+"&key="+securedPassword);
 		          } else {
 		        	  response.sendRedirect("Login?access=0");
 		          }

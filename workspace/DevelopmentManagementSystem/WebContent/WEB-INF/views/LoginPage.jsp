@@ -64,7 +64,7 @@
 			
 			<div class="form-group">
 				<label class="font-weight-bold">Password</label> 
-				<input type="password" class="form-control" placeholder="Password" name="password">
+				<input type="password" class="form-control" placeholder="Password" name="password" minlength="5">
 			</div>
 			<button type="submit" class="btn btn-primary form-control">Submit</button>
 			

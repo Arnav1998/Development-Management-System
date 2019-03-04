@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.Encrypter;
+
 @WebServlet("/SignUp")
 public class SignUp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -56,11 +58,13 @@ public class SignUp extends HttpServlet {
 			        String url = "jdbc:mysql://148.66.138.112:3306/projectX3337";
 			      	String username="Arnav";
 			      	String dbPassword="projectX3337";
+			      	new Encrypter();
+					String securedPassword = Encrypter.encrypt(password);
 			
 			          c = DriverManager.getConnection( url, username, dbPassword );
 			          Statement stmt = c.createStatement();;
-			          String query = "INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `phone`, `address`, `city`, `state`, `zip`, `projectId`) VALUES (NULL, '"+firstName+"', '"+lastName+"', '"+email+"', '"+password+"', '"+phone+"', '"+address+"', '"+city+"', '"+state+"', '"+zip+"', NULL);";
-			          int rs = stmt.executeUpdate(query);
+			          String query = "INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `phone`, `address`, `city`, `state`, `zip`, `projectId`) VALUES (NULL, '"+firstName+"', '"+lastName+"', '"+email+"', '"+securedPassword+"', '"+phone+"', '"+address+"', '"+city+"', '"+state+"', '"+zip+"', NULL);";
+			          stmt.executeUpdate(query);
 			          
 			          response.sendRedirect("Login");
 			       
