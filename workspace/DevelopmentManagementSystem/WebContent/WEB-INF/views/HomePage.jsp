@@ -1,48 +1,3 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-	<meta charset="UTF-8">
-	<title>Home</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	
-</head>
-
-<body>
-
-	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-	
-		<a class="navbar-brand" href="#">Navbar</a>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">About Us</a>
-				</li>
-			</ul>
-			
-			<a class="btn btn-outline-primary mr-1 text-light" href="SignUp">SignUp</a>
-			<a class="btn btn-outline-primary text-light" href="Login">Login</a>
-		
-		</div>
-		
-	</nav>
-
-
-
-</body>
-
-</html> --%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -113,12 +68,6 @@
 			width: 100%
 		}
 
-/* 		footer {
-			width: 100%;
-			padding: 5% 5% 10% 5%
-			color: #FFF;
-		} */
-
 		.fa {
 			padding: 15px;
 			font-size: 25px;
@@ -153,39 +102,6 @@
 </head>
 
 <body>
-
-<!-- 	<nav class="navbar navbar-default navbar-fixed-top  navbar-dark" role="navigation">
-
-		<div class="container-fluid">
-			
-			<div class = "navbar-header">
-			
-				<div class="collapse navbar-collapse" id="navbar-collapse-main">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a class="active" href="#">Home</a></li>
-						<li><a href="#" style="color:#fff;">About</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Testimonials</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</div>
-			
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
-
-					<span class="sr-only">Toggle navigation</span>
-					<span class="navbar-toggler-icon"></span>
-
-				</button>
-
-				<a class="navbar-brand" href="#"><img src=""></a>
-
-			</div>	
-
-
-		</div>
-
-
-	</nav> -->
 	
 	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 	
@@ -319,22 +235,6 @@
 			</div>
 		</div>
 	</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 
