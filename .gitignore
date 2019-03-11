@@ -1,5 +1,9 @@
 /.metadata/
 /.recommenders/
 .DS_Store
-/apache-tomcat-8.0.53
-/workspace/Servers
+apache-tomcat-8.0.53
+workspace/Servers
+workspace/.DS_Store
+workspace/DevelopmentManagementSystem/.classpath
+workspace/DevelopmentManagementSystem/.project
+workspace/DevelopmentManagementSystem/.settings/
