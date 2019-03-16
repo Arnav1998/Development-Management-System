@@ -7,3 +7,5 @@ workspace/.DS_Store
 workspace/DevelopmentManagementSystem/.classpath
 workspace/DevelopmentManagementSystem/.project
 workspace/DevelopmentManagementSystem/.settings/
+apache-tomcat-8.5.34
+workspace/DevelopmentManagementSystem/bin/
