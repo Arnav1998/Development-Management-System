@@ -6,6 +6,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -53,7 +55,24 @@ public class Dashboard extends HttpServlet {
 	          ResultSet rs = stmt.executeQuery( query );
 	
 	          if (rs.next()) {
-	        	  request.getRequestDispatcher("/WEB-INF/views/DashboardPage.jsp").forward(request, response);
+	        	  //c if user has projects. If yes create an ArrayList consisting of id's of user projects. If no then just forward to jsp.
+	        	  String projectQuery = "select `projectId` from `users` WHERE email='"+request.getParameter("email")+"' AND password='"+securedPassword+"'";
+		          ResultSet rs2 = stmt.executeQuery( projectQuery );
+	        	  
+		          rs2.next(); //skip the column entry result which will always be true
+	        	  if (rs2.next()) {
+	        		  List<Integer> projectIds = new ArrayList<Integer>();
+	        		  while (rs2.next()) {
+	        			  projectIds.add(rs2.getInt("projectId"));
+	        		  }
+	        		  
+	        		  request.setAttribute("projectList", projectIds);
+	        		  request.getRequestDispatcher("/WEB-INF/views/DashboardPage.jsp").forward(request, response);
+	        		  
+	        	  } else {
+	        		  request.getRequestDispatcher("/WEB-INF/views/DashboardPage.jsp").forward(request, response);
+	        	  }
+	        	 
 	          } else {
 	        	//if user is not logged in, redirect to the home page
 	        	  response.sendRedirect("Home");

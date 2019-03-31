@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+  
 <!DOCTYPE html>
 
 <html>
@@ -108,7 +109,14 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<h1>Sidebar Layout</h1>
+						<h1>Projects</h1>
+						<c:if test="${not empty projectList}">
+							
+						</c:if>
+						<c:if test="${empty projectList}">
+							<h3>No projects found</h3>
+							<a href="#" class="btn btn-primary lg">Create Project</a> 
+						</c:if>
 					</div>
 				</div>
 			</div>
