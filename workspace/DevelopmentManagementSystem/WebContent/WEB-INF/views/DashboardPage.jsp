@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
+
+<sql:setDataSource
+	driver="com.mysql.jdbc.Driver"
+	url="jdbc:mysql://148.66.138.112:3306/projectX3337"
+	user="Arnav"
+	password="projectX3337"
+/>
   
 <!DOCTYPE html>
 
@@ -111,11 +118,23 @@
 					<div class="col-lg-12">
 						<h1>Projects</h1>
 						<c:if test="${not empty projectList}">
+							<c:forEach items="${projectList}" var="projectId">
 							
+							  	<sql:query var="items">
+									SELECT `name` FROM `projects` WHERE `id`= ${projectId}
+								</sql:query>
+
+								<c:forEach items="${items.rowsByIndex}" var="row">
+									<c:forEach items="${row}" var="col">
+										<h3>${col}</h3>
+									</c:forEach>
+								</c:forEach>
+
+							</c:forEach>
 						</c:if>
 						<c:if test="${empty projectList}">
 							<h3>No projects found</h3>
-							<a href="#" class="btn btn-primary lg">Create Project</a> 
+							<a href="NewProject?email=${param.email}&key=${param.key}" class="btn btn-primary lg">Create Project</a> 
 						</c:if>
 					</div>
 				</div>
