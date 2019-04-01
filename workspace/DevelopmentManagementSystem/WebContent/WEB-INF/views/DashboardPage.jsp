@@ -39,10 +39,12 @@
 		 
 		.left {
 			background: url(images/leftDashboardImg.jpg) no-repeat center center;
+			background-size: cover;
 		}
 		
 		.right {
 			background: url(images/rightDashboardImg.jpg) no-repeat center center;
+			background-size: cover;
 		}
 		
 		
@@ -81,14 +83,14 @@
 	
 							<c:forEach items="${items.rowsByIndex}" var="row">
 								<c:forEach items="${row}" var="col">
-									<a href="#" class="btn btn-primary lg d-flex justify-content-center align-items-center">${col}</a>
+									<a href="#" class="btn btn-primary lg d-flex justify-content-center align-items-center mt-1">${col}</a>
 								</c:forEach>
 							</c:forEach>
 	
 						</c:forEach>
 					</c:if>
 					<c:if test="${empty projectList}">
-						<h3>No projects found</h3>
+						<h3 class="btn btn-danger lg d-flex justify-content-center align-items-center">No projects found</h3>
 					</c:if>
 				</div>
 			</div>
@@ -104,39 +106,6 @@
 		</div>
 	
 	</div>
-	<%-- <div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="text-center mt-3">Projects</h1>
-				<c:if test="${not empty projectList}">
-					<c:forEach items="${projectList}" var="projectId">
-
-						<sql:query var="items">
-									SELECT `name` FROM `projects` WHERE `id`= ${projectId}
-								</sql:query>
-
-						<c:forEach items="${items.rowsByIndex}" var="row">
-							<c:forEach items="${row}" var="col">
-								<div class="container">
-								  	<div class="row">
-								    	<div class="col text-center">
-								      		<button class="btn btn-primary btn-lg">${col}</button>
-								   		 </div>
-								 	 </div>
-								</div>
-							</c:forEach>
-						</c:forEach>
-
-					</c:forEach>
-				</c:if>
-				<c:if test="${empty projectList}">
-					<h3>No projects found</h3>
-					<a href="NewProject?email=${param.email}&key=${param.key}"
-						class="btn btn-primary lg">Create Project</a>
-				</c:if>
-			</div>
-		</div>
-	</div> --%>
 
 </body>
 

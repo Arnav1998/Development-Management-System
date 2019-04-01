@@ -51,12 +51,13 @@ public class Dashboard extends HttpServlet {
 	          c = DriverManager.getConnection( url, username, dbPassword );
 	          Statement stmt = c.createStatement();
 		         
-	          String query = "select * from `users` WHERE email='"+request.getParameter("email")+"' AND password='"+securedPassword+"'";
+	          String query = "select `id` from `users` WHERE email='"+request.getParameter("email")+"' AND password='"+securedPassword+"'";
 	          ResultSet rs = stmt.executeQuery( query );
 	
 	          if (rs.next()) {
 	        	
-	        	  String projectQuery = "select `projectId` from `users` WHERE email='"+request.getParameter("email")+"' AND password='"+securedPassword+"'";
+	        	  int userId = rs.getInt("id");
+	        	  String projectQuery = "SELECT `projectId` FROM `user-projects` WHERE userId="+userId;
 		          ResultSet rs2 = stmt.executeQuery( projectQuery );
 	        	  
 		          List<Integer> projectIds = new ArrayList<Integer>();
