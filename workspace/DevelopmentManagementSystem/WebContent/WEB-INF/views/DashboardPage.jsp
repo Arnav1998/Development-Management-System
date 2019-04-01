@@ -49,7 +49,7 @@
 		
 		
 	</style>
-	
+		
 </head>
 
 <body>
@@ -58,13 +58,20 @@
 	
 		<a class="navbar-brand" href="#">Navbar</a>
 
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="Dashboard?email=${param.email}&key=${param.key}">Dashboard</a>
-				</li>
-			</ul>
-			
-			<a class="btn btn-outline-primary mr-1 text-light" href="Logout?email=${param.email}">Logout</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="Dashboard?email=${param.email}&key=${param.key}">Dashboard</a>
+			</li>
+		</ul>
+		
+		<form class="form-inline" action="Search" method="POST">
+			<input class="form-control mr-sm-2" name="searchQuery" type="search" placeholder="Search" aria-label="Search">
+			<input type="hidden" name="email" value="${param.email}">
+			<input type="hidden" name="key" value="${param.key}">
+			<button class="btn btn-outline-primary my-2 my-sm-0 m-2 text-light">Search</button>
+		</form>
+
+		<a class="btn btn-outline-primary mr-1 text-light" href="Logout?email=${param.email}">Logout</a>
 
 	</nav>
 
