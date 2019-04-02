@@ -8,12 +8,12 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Search</title>
+		<title>Project Info</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 
 	<body>
-
+	
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 	
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -36,26 +36,49 @@
 				href="Logout?email=${param.email}">Logout</a>
 	
 		</nav>
-
-
-		<h1 class="text-center mt-5">Results</h1>
-		<h4 class="text-center mt-5">${fn:length(projectMap)} item(s) found</h4>
 		
-		<div class="mt-5 mx-auto border p-5 bg-light" style="width: 600px;">
+		<h1 class="text-center mt-5">${name}</h1>
+		<h4 class="text-center mt-5">${fn:length(userInfoList)} member(s) found</h4>
+		
+		<div class="mt-5 mx-auto border p-5 bg-light" style="width: 75%;">
 
-			<table class="table table-bordered table-striped table-hover text-center">
+<%-- 			<table class="table table-bordered table-striped table-hover text-center">
 			
-				<c:forEach items="${projectMap}" var="entry">
-					<tr>
-						<td><strong><a href="ProjectDescriptor?email=${email}&key=${key}&id=${entry.key}&name=${entry.value}">${entry.value}</a></strong></td>
-					</tr>
+				<c:forEach items="${userInfoList}" var="user">
+					<c:forEach items="${user}" var="userInfo">
+						<tr>
+							<td><strong><a href="ProjectDescriptor?email=${email}&key=${key}&id=${entry.key}">${entry.value}</a></strong></td>
+						</tr>
+					</c:forEach>
 				</c:forEach>
 				
 			</table>
-		
+			 --%>
+			<table class="table table-bordered table-striped table-hover text-center">
+			
+				<tr>
+    				<td><strong>First Name</strong></td>
+					<td><strong>Last Name</strong></td>
+					<td><strong>Email</strong></td>
+					<td><strong>Phone</strong></td>
+					<td><strong>Address</strong></td>
+					<td><strong>City</strong></td>
+					<td><strong>State</strong></td>
+					<td><strong>Zip</strong></td>
+				</tr> 
+			
+				<c:forEach items="${userInfoList}" var="user">
+					<tr>
+						<c:forEach items="${user}" var="value">
+							<td>${value}</td>
+						</c:forEach>
+					</tr>
+				</c:forEach>
+					
+			</table>
+				
 		</div>
-		
-		
-</body>
+	
+	</body>
 
 </html>
