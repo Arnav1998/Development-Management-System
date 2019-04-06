@@ -48,7 +48,7 @@ public class NewProject extends HttpServlet {
 	
 	      	c = DriverManager.getConnection( url, username, dbPassword );
 	        Statement stmt = c.createStatement();
-	        String query = "SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'projectX3337' AND TABLE_NAME = 'user-projects';";
+	        String query = "SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'projectX3337' AND TABLE_NAME = 'projects';";
 	        ResultSet rs = stmt.executeQuery( query );
 	        rs.next(); //remove unnecessary value
 	        int id = rs.getInt("AUTO_INCREMENT");
@@ -62,7 +62,7 @@ public class NewProject extends HttpServlet {
 	        stmt.executeUpdate( "INSERT INTO `projects` (`id`, `name`, `todoId`, `calendarId`, `expensesId`, `requirementsId`, `chatroomId`) VALUES (NULL, '"+request.getParameter("projectName")+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"');" );
 	        
 	        //insert into user-projects intermediary table
-	        stmt.executeUpdate("INSERT INTO `user-projects` (`userId`, `projectId`) VALUES ('"+userId+"' , NULL)");
+	        stmt.executeUpdate("INSERT INTO `user-projects` (`userId`, `projectId`) VALUES ('"+userId+"' , '"+id+"')");
 	        
 	        response.sendRedirect("Dashboard?email="+request.getParameter("email")+"&key="+request.getParameter("key")+"");
 	        

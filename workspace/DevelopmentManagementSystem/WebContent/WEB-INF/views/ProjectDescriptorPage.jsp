@@ -18,7 +18,7 @@
 	
 			<a class="navbar-brand" href="#">Navbar</a>
 	
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr-auto"> 
 				<li class="nav-item"><a class="nav-link"
 					href="Dashboard?email=${param.email}&key=${param.key}">Dashboard</a>
 				</li>
@@ -38,22 +38,10 @@
 		</nav>
 		
 		<h1 class="text-center mt-5">${name}</h1>
-		<h4 class="text-center mt-5">${fn:length(userInfoList)} member(s) found</h4>
+		<h4 class="text-center mt-3">${fn:length(userInfoList)} member(s) found</h4>
 		
 		<div class="mt-5 mx-auto border p-5 bg-light" style="width: 75%;">
 
-<%-- 			<table class="table table-bordered table-striped table-hover text-center">
-			
-				<c:forEach items="${userInfoList}" var="user">
-					<c:forEach items="${user}" var="userInfo">
-						<tr>
-							<td><strong><a href="ProjectDescriptor?email=${email}&key=${key}&id=${entry.key}">${entry.value}</a></strong></td>
-						</tr>
-					</c:forEach>
-				</c:forEach>
-				
-			</table>
-			 --%>
 			<table class="table table-bordered table-striped table-hover text-center">
 			
 				<tr>
@@ -76,9 +64,11 @@
 				</c:forEach>
 					
 			</table>
+			
+			<a href="AddProject?projectId=${projectId}&email=${param.email}&key=${param.key}" class="btn btn-primary mt-2" style="width:100%">Add Project</a>
 				
 		</div>
-	
+		
 	</body>
 
 </html>
