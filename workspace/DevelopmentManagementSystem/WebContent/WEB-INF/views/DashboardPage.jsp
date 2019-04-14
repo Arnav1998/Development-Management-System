@@ -99,6 +99,8 @@
 				<li><a>Projects</a></li>
 				<li><a>To-do</a></li>
 				<li><a>Calendar</a></li>				
+				<li><a>COCOMO Calculator</a></li>				
+				<li><a>Chat Rooms</a></li>				
 			</ul>
 		</div>
 		
