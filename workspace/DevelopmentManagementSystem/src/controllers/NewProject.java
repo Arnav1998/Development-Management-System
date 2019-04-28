@@ -65,11 +65,12 @@ public class NewProject extends HttpServlet {
 	        
 	        //Create tables for todo lists, calendar, expenses, requirements, and chatroom
 	        
+//	        ResultSet rs3 = stmt.executeQuery("SELECT firstName FROM users WHERE userId="+userId);
+//	        rs3.next();
+//	        String userName = rs3.getString("firstName");
 	        
-	        
-	        
-	        
-	        
+	        //create todo table
+	        stmt.executeUpdate("CREATE TABLE `todo"+id+"` (id int AUTO_INCREMENT PRIMARY KEY, todo varchar(255) NOT NULL, userName varchar(255) NOT NULL, due varchar(255) NOT NULL, progressId int NOT NULL);");
 	        
 	        
 	        
