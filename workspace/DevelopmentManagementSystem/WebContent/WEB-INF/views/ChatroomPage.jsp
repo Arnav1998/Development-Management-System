@@ -213,19 +213,14 @@
 	        </nav>
 
 			<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-
+				
+				<h3 class="mt-2 mb-0 text-center">Chat Room</h3>
+				
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
 	
-	
-					<div class="container mt-5">
+					<div class="container mt-3">
 						<div class="row">
-							<div class="col-md-4">
-								<div class="well">
-									<h3>Online Users</h3>
-									<ul class="list-group" id="users"></ul>
-								</div>
-							</div>
-							<div class="col-md-8">
+							<div class="col">
 								<div class="chat" id="chat">
 									<div class="form-group">
 										<textarea class="form-control" id="messageTextArea" readonly="readonly" rows="10" style="border-left: 5px solid gold;"></textarea> <br>
@@ -237,27 +232,12 @@
 								</div>
 							</div>
 						</div>
-					
-					
-					<!-- <body> -->
-	<!-- 
-		<textarea id="messageTextArea" readonly="readonly" rows="10" cols="45"></textarea><br>
-		<input type="text" id="messageText" size="50"/><input type="button" value="Send" onclick="sendMessage();"/>
-
-	</body> -->
-					
 					</div>
-	
-					
-	
-	
+				
 				</div>
 
-			
-
 			</main>
-			
-			
+
 		  </div>
 	    </div>
 	
