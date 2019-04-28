@@ -90,7 +90,7 @@
 	
 							<c:forEach items="${items.rowsByIndex}" var="row">
 								<c:forEach items="${row}" var="col">
-									<a href="#" class="btn btn-primary lg d-flex justify-content-center align-items-center mt-1">${col}</a>
+									<a href="ProjectDashboard?email=${param.email}&key=${param.key}&projectId=${projectId}&projectName=${col}" class="btn btn-primary lg d-flex justify-content-center align-items-center mt-1">${col}</a>
 								</c:forEach>
 							</c:forEach>
 	

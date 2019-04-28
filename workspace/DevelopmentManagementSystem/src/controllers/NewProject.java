@@ -61,6 +61,25 @@ public class NewProject extends HttpServlet {
 	        //insert into project table
 	        stmt.executeUpdate( "INSERT INTO `projects` (`id`, `name`, `todoId`, `calendarId`, `expensesId`, `requirementsId`, `chatroomId`) VALUES (NULL, '"+request.getParameter("projectName")+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"');" );
 	        
+	        
+	        
+	        //Create tables for todo lists, calendar, expenses, requirements, and chatroom
+	        
+//	        ResultSet rs3 = stmt.executeQuery("SELECT firstName FROM users WHERE userId="+userId);
+//	        rs3.next();
+//	        String userName = rs3.getString("firstName");
+	        
+	        //create todo table
+	        stmt.executeUpdate("CREATE TABLE `todo"+id+"` (id int AUTO_INCREMENT PRIMARY KEY, todo varchar(255) NOT NULL, userName varchar(255) NOT NULL, due varchar(255) NOT NULL, progressId int NOT NULL);");
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
 	        //insert into user-projects intermediary table
 	        stmt.executeUpdate("INSERT INTO `user-projects` (`userId`, `projectId`) VALUES ('"+userId+"' , '"+id+"')");
 	        
