@@ -7,4 +7,9 @@ workspace/.DS_Store
 workspace/DevelopmentManagementSystem/.classpath
 workspace/DevelopmentManagementSystem/.project
 workspace/DevelopmentManagementSystem/.settings/
+<<<<<<< Updated upstream
 apache-tomcat-8.5.38
+=======
+workspace/apache-tomcat-8.5.38/
+workspace/DevelopmentManagementSystem/bin/
+>>>>>>> Stashed changes
