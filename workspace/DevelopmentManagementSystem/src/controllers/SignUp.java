@@ -63,7 +63,7 @@ public class SignUp extends HttpServlet {
 			
 			          c = DriverManager.getConnection( url, username, dbPassword );
 			          Statement stmt = c.createStatement();;
-			          String query = "INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `phone`, `address`, `city`, `state`, `zip`, `projectId`) VALUES (NULL, '"+firstName+"', '"+lastName+"', '"+email+"', '"+securedPassword+"', '"+phone+"', '"+address+"', '"+city+"', '"+state+"', '"+zip+"', NULL);";
+			          String query = "INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `phone`, `address`, `city`, `state`, `zip`) VALUES (NULL, '"+firstName+"', '"+lastName+"', '"+email+"', '"+securedPassword+"', '"+phone+"', '"+address+"', '"+city+"', '"+state+"', '"+zip+"');";
 			          stmt.executeUpdate(query);
 			          
 			          response.sendRedirect("Login");
