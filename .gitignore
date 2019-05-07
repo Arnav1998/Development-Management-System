@@ -7,11 +7,20 @@ workspace/.DS_Store
 workspace/DevelopmentManagementSystem/.classpath
 workspace/DevelopmentManagementSystem/.project
 workspace/DevelopmentManagementSystem/.settings/
+<<<<<<< HEAD
+=======
+apache-tomcat-8.5.33
+>>>>>>> Conan
 apache-tomcat-8.5.34
 workspace/DevelopmentManagementSystem/bin/
 apache-tomcat-8.5.38
 workspace/apache-tomcat-8.5.38/
 workspace/DevelopmentManagementSystem/bin/
 apache-tomcat-8.5.34
+<<<<<<< HEAD
 workspace/DevelopmentManagementSystem/bin/
+apache-tomcat-8.5.33
 
+=======
+workspace/DevelopmentManagementSystem/bin/
+>>>>>>> Conan
