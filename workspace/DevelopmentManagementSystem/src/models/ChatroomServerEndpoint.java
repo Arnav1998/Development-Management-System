@@ -7,13 +7,12 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Set;
  import javax.websocket.server.ServerEndpoint;
+
+
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonWriter;
  
  @ServerEndpoint("/chatroomServerEndpoint")
 public class ChatroomServerEndpoint {
