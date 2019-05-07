@@ -74,8 +74,8 @@ public class NewProject extends HttpServlet {
 	        
 	        
 	        
-	        
-	        
+	        //create calendar table
+	        stmt.executeUpdate("CREATE TABLE `calendar"+id+"` (id int AUTO_INCREMENT PRIMARY KEY, title varchar(255) NOT NULL, start varchar(255) NOT NULL, end varchar(255) NOT NULL);");
 	        
 	        
 	        

@@ -68,7 +68,7 @@ public class ToDoList extends HttpServlet {
 		         request.setAttribute("todos", todos);
 		         request.setAttribute("email", request.getParameter("email"));
 		         request.setAttribute("key", request.getParameter("key"));
-		         request.setAttribute("name", request.getParameter("name"));
+		         request.setAttribute("projectName", request.getParameter("projectName"));
 		         request.setAttribute("projectId", request.getParameter("id"));
 
 		      }
