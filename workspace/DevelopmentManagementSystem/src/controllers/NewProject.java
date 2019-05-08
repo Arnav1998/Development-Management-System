@@ -59,9 +59,7 @@ public class NewProject extends HttpServlet {
 	        int userId = rs2.getInt("id");
 	        
 	        //insert into project table
-	        stmt.executeUpdate( "INSERT INTO `projects` (`id`, `name`, `todoId`, `calendarId`, `expensesId`, `requirementsId`, `chatroomId`) VALUES (NULL, '"+request.getParameter("projectName")+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"');" );
-	        
-	        
+	        stmt.executeUpdate( "INSERT INTO `projects` (`id`, `name`, `todoId`, `calendarId`, `expensesId`, `requirementsId`, `chatroomId`, `budget`) VALUES (NULL, '"+request.getParameter("projectName")+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"', '"+id+"', NULL);" );
 	        
 	        //Create tables for todo lists, calendar, expenses, requirements, and chatroom
 	        
@@ -78,6 +76,9 @@ public class NewProject extends HttpServlet {
 	        stmt.executeUpdate("CREATE TABLE `calendar"+id+"` (id int AUTO_INCREMENT PRIMARY KEY, title varchar(255) NOT NULL, start varchar(255) NOT NULL, end varchar(255) NOT NULL);");
 	        
 	        
+	        
+	        //create budget table
+	        stmt.executeUpdate("CREATE TABLE `budget"+id+"` (id int AUTO_INCREMENT PRIMARY KEY, title varchar(255) NOT NULL, amount_used int NOT NULL, authorizer varchar(255) NOT NULL);");
 	        
 	        
 	        //insert into user-projects intermediary table

@@ -8,7 +8,10 @@ import java.util.Iterator;
 import java.util.Set;
  import javax.websocket.server.ServerEndpoint;
 
+import com.google.gson.JsonObject;
+import com.google.gson.stream.JsonWriter;
 
+import javax.json.Json;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -40,9 +43,9 @@ public class ChatroomServerEndpoint {
 	 }
 	 
 	 private String buildJsonData(String username, String message) {
-		 JsonObject jsonObject = Json.createObjectBuilder().add("message", username+": "+message).build();
+		 javax.json.JsonObject jsonObject = Json.createObjectBuilder().add("message", username+": "+message).build();
 		 StringWriter stringWriter = new StringWriter();
-		 try (JsonWriter jsonWriter = Json.createWriter(stringWriter)) {jsonWriter.write(jsonObject);}
+		 try (javax.json.JsonWriter jsonWriter = Json.createWriter(stringWriter)) {jsonWriter.write(jsonObject);}
 		 return stringWriter.toString();
 		 
 	 }
