@@ -56,7 +56,7 @@
  	
  	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 	
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="#">Project X</a>
 
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">

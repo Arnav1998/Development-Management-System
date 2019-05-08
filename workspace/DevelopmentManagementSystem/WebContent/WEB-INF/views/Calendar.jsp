@@ -26,6 +26,7 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Calendar</title>
 		<link href='css/fullcalendar.print.min.css' rel='stylesheet'
 			media='print' />
 		<link rel="stylesheet"
@@ -166,46 +167,66 @@
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-					<div class="sidebar-sticky">
-						<ul class="nav flex-column">
-							<li class="nav-item"><a class="nav-link active"
-								href="ProjectDashboard?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
-									<span data-feather="home"></span> Dashboard <span
-									class="sr-only">(current)</span>
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="ToDoList?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
-									<span data-feather="file"></span> Todo
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="Contacts?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
-									<span data-feather="users"></span> Contacts
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="Chatroom?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
-									<span data-feather="message-circle"></span> Chat Room
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="Budget?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
-									<span data-feather="bar-chart-2"></span> Budget Analysis
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="calendar"></span> Calendar
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="alert-triangle"></span> Reminders
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="clock"></span> Meeting Scheduler
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="Dashboard?email=${param.email}&key=${param.key}"> <span
-									data-feather="clock"></span> All Projects
-							</a></li>
-	
-						</ul>
-					</div>
-				</nav>
+		          <div class="sidebar-sticky">
+		            <ul class="nav flex-column">
+		              <li class="nav-item">
+		                <a class="nav-link" href="ProjectDashboard?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="home"></span>
+		                  Dashboard <span class="sr-only">(current)</span>
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="ToDoList?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="file"></span>
+		                  Todo
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Contacts?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="users"></span>
+		                  Contacts
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Chatroom?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="message-circle"></span>
+		                  Chat Room
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Budget?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="bar-chart-2"></span>
+		                  Budget Analysis
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link active" href="Calendar?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}"">
+		                  <span data-feather="calendar"></span>
+		                  Calendar
+		                </a>
+		<!--               </li>
+		                <li class="nav-item">
+		                <a class="nav-link" href="#">
+		                  <span data-feather="alert-triangle"></span>
+		                  Reminders
+		                </a>
+		              </li> -->
+		              <li class="nav-item">
+		                <a class="nav-link" href="MeetingScheduler?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="clock"></span>
+		                  Meeting Scheduler
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Dashboard?email=${param.email}&key=${param.key}">
+		                  <span data-feather="grid"></span>
+		                  All Projects
+		                </a>
+		              </li>
+		              
+		            </ul>
+		          </div>
+		        </nav>
 				
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					

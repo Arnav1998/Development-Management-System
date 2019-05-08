@@ -12,7 +12,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Dashboard</title>
+		<title>Todo</title>
 		<link rel="icon" type="image/x-icon"
 			href="http://example.com/favicon.ico" />
 		<link rel="stylesheet"
@@ -125,109 +125,133 @@
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-					<div class="sidebar-sticky">
-						<ul class="nav flex-column">
-							<li class="nav-item"><a class="nav-link"
-								href="ProjectDashboard?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
-									<span data-feather="home"></span> Dashboard <span
-									class="sr-only">(current)</span>
-							</a></li>
-							<li class="nav-item"><a class="nav-link active" href="ToDoList?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}"> <span
-									data-feather="file"></span> Todo
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="Contacts?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
-									<span data-feather="users"></span> Contacts
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="message-circle"></span> Chat Room
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="bar-chart-2"></span> Budget Analysis
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="calendar"></span> Calendar
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="alert-triangle"></span> Reminders
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#"> <span
-									data-feather="clock"></span> Meeting Scheduler
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="Dashboard?email=${param.email}&key=${param.key}"> <span
-									data-feather="clock"></span> All Projects
-							</a></li>
-	
-						</ul>
-					</div>
-				</nav>
+		          <div class="sidebar-sticky">
+		            <ul class="nav flex-column">
+		              <li class="nav-item">
+		                <a class="nav-link" href="ProjectDashboard?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="home"></span>
+		                  Dashboard <span class="sr-only">(current)</span>
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link active" href="ToDoList?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="file"></span>
+		                  Todo
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Contacts?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="users"></span>
+		                  Contacts
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Chatroom?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="message-circle"></span>
+		                  Chat Room
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Budget?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="bar-chart-2"></span>
+		                  Budget Analysis
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Calendar?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}"">
+		                  <span data-feather="calendar"></span>
+		                  Calendar
+		                </a>
+		<!--               </li>
+		                <li class="nav-item">
+		                <a class="nav-link" href="#">
+		                  <span data-feather="alert-triangle"></span>
+		                  Reminders
+		                </a>
+		              </li> -->
+		              <li class="nav-item">
+		                <a class="nav-link" href="MeetingScheduler?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
+		                  <span data-feather="clock"></span>
+		                  Meeting Scheduler
+		                </a>
+		              </li>
+		              <li class="nav-item">
+		                <a class="nav-link" href="Dashboard?email=${param.email}&key=${param.key}">
+		                  <span data-feather="grid"></span>
+		                  All Projects
+		                </a>
+		              </li>
+		              
+		            </ul>
+		          </div>
+		        </nav>
 				
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					
 					<h1 class="text-center mb-0 ml-3">Progress Report</h1>
 					
-					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">						
+					<c:if test="${not empty todos}">
 					
-						
-						
-						
-						<!-- todo code -->
-						<div class="mt-3 mx-auto border p-5 bg-light mb-5" style="width: 75%;">
-				
-							<table class="table table-bordered table-striped table-hover text-center">
-							
-								<tr>
-				    				<td><strong>Task</strong></td>
-									<td><strong>Person Responsible</strong></td>
-									<td><strong>Due Date</strong></td>
-									<td><strong>Progress</strong></td>
-									<!-- <td><strong>Action</strong></td> -->
-								</tr> 
-							
-								<c:forEach items="${todos}" var="todo" varStatus="todoCount">
-									<tr>
-										<c:forEach items="${todo}" var="value" varStatus="index">
-										
-											<c:if test="${index.count==1}">
-												<td style="border-left: 5px solid gold;">${value}</td>
-											</c:if>
-											 
-											
-											<c:if test="${index.count!=1 && index.count!=4}">
-												<td >${value}</td>
-											</c:if>
-											
-											<c:if test="${index.count==4}">
-												<!-- progress -->
-												
-												<c:if test="${value==1}">
-													<td style="padding: 0; height:100%;"><a href="ProgressButtonClicked?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}&status=working&todoId=${todoCount.count}"><button style="width:100%; height:100%; margin: 0; padding: 0; background: #FFFF00;"><strong>Working</strong></button></a></td>
-												</c:if>
-												
-												<c:if test="${value==2}">
-													<td style="padding: 0; height:100%;"><a href="ProgressButtonClicked?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}&status=late&todoId=${todoCount.count}"><button style="width:100%; height:100%; margin: 0; padding: 0; background: #ff0000;"><strong>Late</strong></button></a></td>
-												</c:if>
-												
-												<c:if test="${value==3}">
-													<td style="padding: 0; height:100%;"><a href="ProgressButtonClicked?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}&status=done&todoId=${todoCount.count}"><button style="width:100%; height:100%; margin: 0; padding: 0; background: #00ff00;"><strong>Done</strong></button></a></td>
-												</c:if>
-												
-											</c:if>
-											
-										</c:forEach>
-										
-										<!-- <td><a data-feather="delete" href="#"></a></td>  --><%-- DeleteTodo?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName} --%>
-										
-									</tr>
-								</c:forEach>
-									
-							</table>
+						<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">						
+
+							<!-- todo code -->
+							<div class="mt-3 mx-auto border p-5 bg-light mb-5" style="width: 75%;">
+					
+								<table class="table table-bordered table-striped table-hover text-center">
 								
+									<tr>
+					    				<td><strong>Task</strong></td>
+										<td><strong>Person Responsible</strong></td>
+										<td><strong>Due Date</strong></td>
+										<td><strong>Progress</strong></td>
+										<!-- <td><strong>Action</strong></td> -->
+									</tr> 
+								
+									<c:forEach items="${todos}" var="todo" varStatus="todoCount">
+										<tr>
+											<c:forEach items="${todo}" var="value" varStatus="index">
+											
+												<c:if test="${index.count==1}">
+													<td style="border-left: 5px solid gold;">${value}</td>
+												</c:if>
+												 
+												
+												<c:if test="${index.count!=1 && index.count!=4}">
+													<td >${value}</td>
+												</c:if>
+												
+												<c:if test="${index.count==4}">
+													<!-- progress -->
+													
+													<c:if test="${value==1}">
+														<td style="inner-padding: 0; height:100%; margin:0;"><a href="ProgressButtonClicked?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}&status=working&todoId=${todoCount.count}"><button style="width:100%; height:100%; margin: 0; padding: 0; background: #FFFF00;"><strong>Working</strong></button></a></td>
+													</c:if>
+													
+													<c:if test="${value==2}">
+														<td style="inner-padding: 0; height:100%; margin:0;"><a href="ProgressButtonClicked?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}&status=late&todoId=${todoCount.count}"><button style="width:100%; height:100%; margin: 0; padding: 0; background: #ff0000;"><strong>Late</strong></button></a></td>
+													</c:if>
+													
+													<c:if test="${value==3}">
+														<td style="inner-padding: 0; height:100%; margin:0;"><a href="ProgressButtonClicked?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}&status=done&todoId=${todoCount.count}"><button style="width:100%; height:100%; margin: 0; padding: 0; background: #00ff00;"><strong>Done</strong></button></a></td>
+													</c:if>
+													
+												</c:if>
+												
+											</c:forEach>
+											
+											<!-- <td><a data-feather="delete" href="#"></a></td>  --><%-- DeleteTodo?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName} --%>
+											
+										</tr>
+									</c:forEach>
+										
+								</table>
+									
+							</div>
+							
+							
 						</div>
-						
-						
-					</div>
+					
+					</c:if>
 					
 					<div class="mt-5 mx-auto border p-5 bg-light" style="width: 75%;">
 					
@@ -263,14 +287,10 @@
 							<button type="submit" class="btn btn-primary form-control">Add Task</button>
 						
 						</form>
-					
+						
 					</div>
 					
-					<!-- <div>
-					
-						other section
-						
-					</div> -->
+					<hr style="border: 5px solid gold; width: 75%;">
 					
 				</main>
 				

@@ -151,13 +151,13 @@
                   <span data-feather="calendar"></span>
                   Calendar
                 </a>
-              </li>
+<!--               </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="alert-triangle"></span>
                   Reminders
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="MeetingScheduler?email=${param.email}&key=${param.key}&projectId=${param.projectId}&projectName=${param.projectName}">
                   <span data-feather="clock"></span>
@@ -166,7 +166,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Dashboard?email=${param.email}&key=${param.key}">
-                  <span data-feather="clock"></span>
+                  <span data-feather="grid"></span>
                   All Projects
                 </a>
               </li>
