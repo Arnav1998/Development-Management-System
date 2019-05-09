@@ -105,13 +105,13 @@
 	
 	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 	
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand text-white">Project X</a>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
+					<a class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">About Us</a>
@@ -163,7 +163,7 @@
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
 					<h4>Built with Affection</h4>
-					<p>Project X has been designed to help you save time, and get over all the frustrations involved in group work. Save time, save effort and stay organized.</p>
+					<p class="lead">Project X has been designed to help you save time, and get over all the frustrations involved in group work. Save time, save effort and stay organized.</p>
 
 				</div>
 
@@ -176,7 +176,7 @@
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
 					<h4>Built with dedication</h4>
-					<p>See at a glance the next actions you should do in order to finish your project. See which tasks should be done today, which should be done soon and which are overdue.</p>
+					<p class="lead">See at a glance the next actions you should do in order to finish your project. See which tasks should be done today, which should be done soon and which are overdue.</p>
 					
 				</div>
 
@@ -193,15 +193,11 @@
 
 	</div>
 
-
-
-	<img src="images/fixedHomeImage.jpg" id="fixed">
-
 	<div class="padding" style="background: #f9f9f9;">
 		
-		<div class="container">
+		<div class="container align-items-center">
 			
-			<div class="row">
+			<div class="row align-items-center bg-light">
 				<div class="col-sm-6 text-center">
 					<h2>Making life easier.</h2>
 					<p class="lead">Stay up to date with your projects to make sure you will meet your deadlines.</p>
@@ -217,20 +213,12 @@
 	</div>
 
 
-	<footer class="container-fluid text-center bg-dark">
+	<footer class="container-fluid text-center bg-dark" style="border-top: solid 5px gold;">
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col">
 				<h3 style="color: #fff; padding-top: 2%;">Contact Us</h3>
 			</div>
-			<div class="col-sm-4">
-				<h3 style="color: #fff; padding-top: 2%;">Connect</h3>
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-instagram"></a>
-			</div>
-			<div class="col-sm-4">
+			<div class="col">
 				<h3 style="color: #fff; padding-top: 2%;">Legal</h3>
 			</div>
 		</div>
